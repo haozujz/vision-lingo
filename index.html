@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,user-scalable=no"
+    />
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.9/interact.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.13.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+    <script src="translations.js"></script>
+
+    <div id="app">
+      <camera-mode
+        :mode="mode"
+        @new-pred="newPred"
+        :active-lang="activeLang"
+        @toggle-active-lang-view-c="toggleActiveLang"
+      ></camera-mode>
+      <import-mode :mode="mode" @new-pred="newPred"></import-mode>
+      <browse-mode
+        :mode="mode"
+        :topcards="topcards"
+        :renderlimited="renderlimited"
+        @change-card-order2="updateCardOrder"
+        @change-card-order-top-to-bottom="updateCardOrderTopToBottom"
+        @change-card-order-bottom-to-top="updateCardOrderBottomToTop"
+        @delete-card2="deleteCard"
+        :active-lang="activeLang"
+        @toggle-active-lang-view2="toggleActiveLang"
+      ></browse-mode>
+      <navi
+        :mode="mode"
+        @change-mode="updateMode"
+        @toggle-overlay="toggleOverlay"
+        @toggle-fullscreen="toggleFullscreen"
+      ></navi>
+      <overlay
+        :overlayhelp="overlayhelp"
+        :overlayload="overlayload"
+        :isloadingmodel="isloadingmodel"
+        :is-kanji-on="isKanjiOn"
+        :is-hira-on="isHiraOn"
+        :is-kata-on="isKataOn"
+        :is-chinese-on="isChineseOn"
+        @toggle-lang="toggleLang"
+        @toggle-overlay="toggleOverlay"
+      ></overlay>
+    </div>
+  </body>
+</html>
