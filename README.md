@@ -1,7 +1,12 @@
-# Hello Website (blank)
-
-This is a basic static HTML starter project you can build on however you like. No need to save. While you develop your site, your changes will happen 🪄 immediately in the preview window. You can upload assets like images or audio in `assets` to the left. The rest is up to you and your imagination.
-
-## What's in this project?
+# Image translator
 
 https://image-translator.glitch.me/
+
+Image classification and language translation.  
+Mobile device compatible. Various performance optimizations including image compression.  
+Node, Express, Axios, ML5, MobileNet, Vue.js. 
+
+## Potential updates
+
+- voiced translations and transliterations
+- provide an assortment of light-weight image classification models
