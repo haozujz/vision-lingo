@@ -2,7 +2,7 @@
 
 https://image-translator.glitch.me/
 
-Image classification and language translation.  
+Image classification and language translation. Browse labelled images in a card-deck format.  
 Mobile device compatible. Various performance optimizations including image compression.  
 
 Node, Express, Axios, ML5, MobileNet, Vue.js. 
