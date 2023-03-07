@@ -1,4 +1,4 @@
-# Image translator
+# Vision Lingo
 
 https://image-translator.glitch.me/
 
