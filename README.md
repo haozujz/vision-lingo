@@ -12,7 +12,7 @@ Node, Express, Axios, ML5, MobileNet, Vue.js.
 ## Notes
 
 - Any new classes that may be included in MobileNet in the future will be automatically translated and stored into browser memory.
-- Goolab's 'hiragana converter' api can be unreliable for the first 5min
+- Goolab's 'hiragana converter' api can be unreliable for the first 5min.
 
 ## Potential updates
 
